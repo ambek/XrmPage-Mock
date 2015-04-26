@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Qunit/qunit-git.css" rel="stylesheet" />
+    <script src="Qunit/qunit.js"></script>
+    <script type="text/javascript">
+        function getNameFromFunction(f) {
+            var f = f.toString();
+            var tmpFcName = /^function\s+([\w\$]+)\s*\(/.exec(f);
+            if (tmpFcName != null && tmpFcName.length > 1)
+                return tmpFcName[1];
+            else
+                return null;
+        }
+
+        function hgj(abc) { return abc; };
+        QUnit.test("Helper: getNameFromFunction", function (assert) {
+            var name = getNameFromFunction(hgj);
+            assert.equal(name, "hgj", "Passed!");
+        });
+        QUnit.test("Helper: getNameFromFunction null", function (assert) {
+            var name = getNameFromFunction(function (akjakjka) { return "lklksls"; });
+            assert.equal(name, null, "Passed!");
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <a href="Control/ControlTest.html">ControlTest</a>
+        <a href="Attributes/AttributeTest.html">AttributeTest</a>
+        <a href="XrmPage/XrmPageTest.html">XrmPageTest</a>
+        <a href="Example/ExampleEntity.html">ExampleTest</a>
+    </div>
+    <br />
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+</body>
+</html>
