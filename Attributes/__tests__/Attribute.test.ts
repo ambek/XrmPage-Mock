@@ -23,7 +23,7 @@ it("Attribute: addOnChange use fieldctx", () => {
     var testOnChange = function () { TEST_globalValue = "hgj"; };
     attr.addOnChange(testOnChange);
     attr.fireOnChange();
-    expect(TEST_globalValue).toBe(hgj);
+    expect(TEST_globalValue).toBe("hgj");
 });
 
 it("Attribute: getName Is Implemented", () => {
