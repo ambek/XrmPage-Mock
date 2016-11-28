@@ -1,5 +1,8 @@
 import { Attribute } from "./../Attribute";
 
+declare var attr;
+declare var TEST_globalValue;
+
 beforeEach(() => {
     jest.resetModules();
     const attr = new Attribute("abr_name", "abc", null, null);
