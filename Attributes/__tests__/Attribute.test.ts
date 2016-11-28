@@ -1,7 +1,7 @@
 import { Attribute } from "./../Attribute";
 
-declare var attr;
-declare var TEST_globalValue;
+declare var attr: Attribute;
+declare var TEST_globalValue: string;
 
 beforeEach(() => {
     jest.resetModules();

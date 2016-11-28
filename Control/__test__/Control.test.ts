@@ -1,8 +1,8 @@
 import { Attribute } from "./../../Attributes/Attribute";
 import { Control, CreateControlWithAttribute } from "./../Control";
 
-declare var ctrl;
-declare var attr;
+declare var ctrl: Control;
+declare var attr: Attribute;
 
 beforeEach(() => {
     jest.resetModules();
