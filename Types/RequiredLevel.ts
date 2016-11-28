@@ -1,0 +1,1 @@
+export type RequiredLevel = "none" | "required" | "recommended";
