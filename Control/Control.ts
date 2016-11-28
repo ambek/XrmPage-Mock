@@ -46,7 +46,7 @@ export class Control {
         this.label = newLabel;
     }
 
-    getVisibel(): boolean {
+    getVisible(): boolean {
         return this.visible;
     }
 

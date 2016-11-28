@@ -12,6 +12,7 @@
         this.name = name;
         this.value = value;
         this.initValue = value;
+        this.onChangeFunctions = [];
     }
 
     getName() {
@@ -34,11 +35,15 @@
         this.submitMode = newSubmitMode;
     }
 
+    getSubmitMode() {
+        return this.submitMode;
+    }
+
     setRequiredLevel(newRequiredLevel) {
         this.requiredLevel = newRequiredLevel;
     }
 
-    getReQuiredLevel() {
+    getRequiredLevel () {
         return this.requiredLevel;
     }
 
@@ -53,11 +58,11 @@
         }
     }
 
-    addOnchange(f: Function): void {
+    addOnChange(f: Function): void {
         let fObj = new Object(null);
         fObj = {
-            fc: f,
-            name: this.getNameFromFunction(f)
+            "fc": f,
+            "name": this.getNameFromFunction(f)
         };
         this.onChangeFunctions.push(fObj);
     }
@@ -67,8 +72,8 @@
             return;
         }
 
-        for (let i of this.onChangeFunctions) {
-            this.onChangeFunctions[i].fc(this);
+        for (let fun of this.onChangeFunctions) {
+            fun.fc(this);
         }
     }
 
