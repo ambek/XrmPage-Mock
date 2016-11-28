@@ -7,7 +7,7 @@
     private onChangeFunctions: Array<any>;
 
     constructor(name, value, requiredLevel, submitMode) {
-        this.requiredLevel = submitMode || "dirty";
+        this.submitMode = submitMode || "dirty";
         this.requiredLevel = requiredLevel || "none";
         this.name = name;
         this.value = value;

@@ -74,7 +74,7 @@ it("Control: getDisabled Is Implemented", () => {
 });
 
 it("Control: setDisabled Is Implemented", () => {
-    expect(ctrl.setDisabled()).not.toBe(null);
+    expect(ctrl.setDisabled).not.toBe(null);
 });
 
 it("Control: setDisabled and getDisabled works", () => {
@@ -86,7 +86,7 @@ it("Control: CreateControlWithAttribute is implemented", () => {
     expect(CreateControlWithAttribute).not.toBe(null);
 });
 
-it("Control: CreateControlWithAttribute is implemented", () => {
+it("Control: CreateControlWithAttribute works", () => {
     var ctrl2 = CreateControlWithAttribute("abr_name", "abc", "none", "Label", false, true);
     var attr2 = ctrl2.getAttribute();
     expect(attr2.getValue()).toBe("abc");

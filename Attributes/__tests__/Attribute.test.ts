@@ -46,16 +46,16 @@ it("Attribute: getIsDirty Is Implemented", () => {
 });
 
 it("Attribute: getIsDirty false at start", () => {
-    expect(attr.getIsDirty).toBe(false);
+    expect(attr.getIsDirty()).toBe(false);
 });
 
 it("Attribute: getIsDirty false at start", () => {
-    expect(attr.getIsDirty).toBe(false);
+    expect(attr.getIsDirty()).toBe(false);
 });
 
 it("Attribute: getIsDirty true post setValue", () => {
     attr.setValue("sthsW");
-    expect(attr.getIsDirty).toBe(true);
+    expect(attr.getIsDirty()).toBe(true);
 });
 
 it("Attribute: setValue Is Implemented", () => {
@@ -65,13 +65,13 @@ it("Attribute: setValue Is Implemented", () => {
 it("Attribute: getIsDirty false post setValue the same", () => {
     attr.setValue("newValue");
     attr.setValue("abc");
-    expect(attr.getIsDirty).toBe(false);
+    expect(attr.getIsDirty()).toBe(false);
 });
 
 it("Attribute: setValue works", () => {
     attr.setValue("test");
     expect(attr.getValue()).toBe("test");
-    expect(attr.getIsDirty).toBe(true);
+    expect(attr.getIsDirty()).toBe(true);
 });
 
 it("Attribute: setSubmitMode Is Implemented", () => {
@@ -79,7 +79,7 @@ it("Attribute: setSubmitMode Is Implemented", () => {
 });
 
 it("Attribute: getSubmitMode works undefined", () => {
-    expect(attr.getSubmitMode()).toBe("always");
+    expect(attr.getSubmitMode()).toBe("dirty");
 });
 
 it("Attribute: getSubmitMode and setSubmintMode works", () => {
@@ -96,12 +96,12 @@ it("Attribute: getRequiredLevel Is Implemented", () => {
 });
 
 it("Attribute: getRequiredLevel works undefined", () => {
-    expect(attr.getRequiredLevel).toBe("none");
+    expect(attr.getRequiredLevel()).toBe("none");
 });
 
 it("Attribute: getRequiredLevel and setRequiredLevel works undefined", () => {
     attr.setRequiredLevel("required");
-    expect(attr.getRequiredLevel).toBe("required");
+    expect(attr.getRequiredLevel()).toBe("required");
 });
 
 
