@@ -53,7 +53,7 @@
         }
     }
 
-    addOnchange(f: Function) {
+    addOnchange(f: Function): void {
         let fObj = new Object(null);
         fObj = {
             fc: f,

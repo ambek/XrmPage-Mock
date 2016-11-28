@@ -58,7 +58,7 @@ it("XrmPage: Attribute fireOnChange", () => {
             Xrm.Page.getAttribute("abr_description").setSubmitMode("never");
         }
     }
-
+    debugger;
     Xrm.Page.getAttribute<Xrm.Page.NumberAttribute>("abr_type").addOnChange(FOCType);
     Xrm.Page.getAttribute<Xrm.Page.NumberAttribute>("abr_type").fireOnChange();
 
