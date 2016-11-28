@@ -1,8 +1,9 @@
+import { Attribute } from "./../Attributes/Attribute";
 import { XrmPageDataEntityMock } from "./XrmPageDataEntityMock";
 
 export class XrmPageDataMock {
     entity: XrmPageDataEntityMock;
-    constructor(id: string, attributes: any) {
+    constructor(id: string, attributes: Array<Attribute>) {
         this.entity = new XrmPageDataEntityMock(id, attributes);
     }
 

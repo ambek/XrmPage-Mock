@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "jest --no-cache"
+  },
   "dependencies": {
     "@types/jest": "^16.0.0",
     "@types/xrm": "^8.0.35",
@@ -17,5 +20,8 @@
       "tsx",
       "js"
     ]
+  },
+  "devDependencies": {
+    "jest": "^17.0.3"
   }
 }

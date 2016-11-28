@@ -1,29 +1,17 @@
+import { EntityControl } from "./../Entity/EntityControl";
+import { Control } from "./../Control/Control";
 export class XrmPageUiMock {
-    controls: any;
+    collection: Array<Control>;
     formType: number;
+    controls: EntityControl;
 
-
-
-    constructor(controls, formType) {
-        this.controls = function () {
-            this.collection = controls;
-            this.get = controlName => {
-                for (let idx of this.collection) {
-                    if (this.collection[idx].getName() === controlName) {
-                        return this.collection[idx];
-                    }
-                };
-                return null;
-            };
-            this.forEach = function () {
-                throw Error("forEach is not ready");
-            };
-        };
-
+    constructor(controls: Array<Control>, formType: number) {
+        this.collection = controls;
         this.formType = formType;
+        this.controls = new EntityControl(controls);
     }
 
-    getFormType () {
+    getFormType(): number {
         return this.formType;
     }
 }

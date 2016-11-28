@@ -1,21 +1,41 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-    <title>control test</title>
-    <link href="../Qunit/qunit-git.css" rel="stylesheet" />
-    <script src="../Qunit/qunit.js"></script>
-    <script src="../Control/Control.js"></script>
-    <script src="../Attributes/Attribute.js"></script>
-    <script src="XrmPage.js"></script>
-    <script src="XrmPageTest.js"></script>
+    <title>XrmPage test</title>
     </script>
 </head>
+
 <body>
-    <div>
-        <p>XRM TEST</p>
-        <a href="../Helper.html">../Helper.html</a>
-    </div>
-    <div id="qunit"></div>
-    <div id="qunit-fixture"></div>
+    <script>
+        System.config({
+            packages: {
+                "./": {
+                    defaultExtension: "ts"
+                }
+            },
+            typescript: {
+                main: "con_typescript.js",
+                meta: {
+                    "con_typescript.js": {
+                        exports: "ts"
+                    }
+                }
+            },
+            transpiler: "typescript",
+            typescriptOptions: {
+                emitDecoratorMetadata: true,
+                experimentalDecorators: true
+            },
+            map: {
+                typescript: "con_typescript.js"
+            },
+            baseURL: "../Webresources/"
+        });
+        System
+            .import("con_XrmMock_main.ts")
+            .then(null, console.error.bind(console));
+    </script>
 </body>
+
 </html>

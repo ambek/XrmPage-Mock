@@ -42,7 +42,7 @@ it("XrmPage: getControl works", () => {
     expect(controlTest1.getLabel()).toBe("This is Name");
 });
 
-it("XrmPage: getControl works", () => {
+it("XrmPage: Attribute fireOnChange", () => {
     function FOCType(fldCtx) {
         if (fldCtx.getEventSource() == null) {
             return;
@@ -59,8 +59,8 @@ it("XrmPage: getControl works", () => {
         }
     }
 
-    Xrm.Page.getAttribute("abr_type").addOnChange(FOCType);
-    Xrm.Page.getAttribute("abr_type").fireOnChange();
+    Xrm.Page.getAttribute<Xrm.Page.NumberAttribute>("abr_type").addOnChange(FOCType);
+    Xrm.Page.getAttribute<Xrm.Page.NumberAttribute>("abr_type").fireOnChange();
 
     expect(Xrm.Page.getControl("abr_description").getVisible()).toBe(false);
     expect(Xrm.Page.getAttribute("abr_description").getRequiredLevel()).toBe("none");
