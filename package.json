@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@types/jest": "^16.0.0",
+    "@types/xrm": "^8.0.35",
+    "jest": "^17.0.3",
+    "ts-jest": "^17.0.0",
+    "typescript": "^2.0.10",
+    "yarn": "^0.17.9"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  }
+}
