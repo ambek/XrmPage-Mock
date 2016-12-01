@@ -14,35 +14,35 @@ beforeEach(() => {
     (<any>window).Xrm = Xrm;
 });
 
-it("XrmPage: Xrm.Page is implemented", () => {
+test("XrmPage: Xrm.Page is implemented", () => {
     expect(Xrm.Page).not.toBe(null);
 });
 
-it("XrmPage: Xrm.Page.getAttribute is implemented", () => {
+test("XrmPage: Xrm.Page.getAttribute is implemented", () => {
     expect(Xrm.Page.getAttribute).not.toBe(null);
 });
 
-it("XrmPage: Xrm.Page getControl is implemented", () => {
+test("XrmPage: Xrm.Page getControl is implemented", () => {
     expect(Xrm.Page.getControl).not.toBe(null);
 });
 
-it("XrmPage: Xrm.Page.ui is implemeted", () => {
+test("XrmPage: Xrm.Page.ui is implemeted", () => {
     expect(Xrm.Page.ui).not.toBe(null);
 });
 
-it("XrmPage: getAttribute works", () => {
+test("XrmPage: getAttribute works", () => {
     const attributeTest1 = Xrm.Page.getAttribute<Xrm.Page.StringAttribute>("abr_name");
     expect(attributeTest1.getValue()).toBe("test1");
     const attributeTest2 = Xrm.Page.getAttribute<Xrm.Page.StringAttribute>("abr_status");
     expect(attributeTest2.getValue()).toBe("Active");
 });
 
-it("XrmPage: getControl works", () => {
+test("XrmPage: getControl works", () => {
     const controlTest1 = Xrm.Page.getControl("abr_name");
     expect(controlTest1.getLabel()).toBe("This is Name");
 });
 
-it("XrmPage: Attribute fireOnChange", () => {
+test("XrmPage: Attribute fireOnChange", () => {
     function FOCType(fldCtx) {
         if (fldCtx.getEventSource() == null) {
             return;

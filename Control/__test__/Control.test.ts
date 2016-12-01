@@ -12,81 +12,81 @@ beforeEach(() => {
     (<any>window).ctrl = ctrl;
 });
 
-it("Control: getName Is Implemented", () => {
+test("Control: getName Is Implemented", () => {
     expect(ctrl.getName).not.toBe(null);
 });
 
-it("Control: getName Is Implemented", () => {
+test("Control: getName Is Implemented", () => {
     expect(ctrl.getName()).toBe("abr_name");
 });
 
-it("Control: getVisible Is Implemented", () => {
+test("Control: getVisible Is Implemented", () => {
     expect(ctrl.getVisible).not.toBe(null);
 });
 
-it("Control: getVisible works true", () => {
+test("Control: getVisible works true", () => {
     expect(ctrl.getVisible()).toBe(true);
 });
 
-it("Control: getVisible works false", () => {
+test("Control: getVisible works false", () => {
     ctrl.setVisible(false);
     expect(ctrl.getVisible()).toBe(false);
 });
 
-it("Control: setVisible Is Implemented", () => {
+test("Control: setVisible Is Implemented", () => {
     expect(ctrl.setVisible).not.toBe(null);
 });
 
-it("Control: setVisible works", () => {
+test("Control: setVisible works", () => {
     ctrl.setVisible(false);
     expect(ctrl.getVisible()).toBe(false);
     ctrl.setVisible(true);
     expect(ctrl.getVisible()).toBe(true);
 });
 
-it("Control: getLabel Is Implemented", () => {
+test("Control: getLabel Is Implemented", () => {
     expect(ctrl.getLabel).not.toBe(null);
 });
 
-it("Control: getLabel works", () => {
+test("Control: getLabel works", () => {
     expect(ctrl.getLabel()).toBe("Label");
 });
 
-it("Control: setLabel Is Implemented", () => {
+test("Control: setLabel Is Implemented", () => {
     expect(ctrl.setLabel).not.toBe(null);
 });
 
-it("Control: setVisible works", () => {
+test("Control: setVisible works", () => {
     ctrl.setLabel("Label_2");
     expect(ctrl.getLabel()).toBe("Label_2");
 });
 
-it("Control: getAttribute Is Implemented", () => {
+test("Control: getAttribute Is Implemented", () => {
     expect(ctrl.getAttribute).not.toBe(null);
 });
 
-it("Control: getAttribute works", () => {
+test("Control: getAttribute works", () => {
     expect(ctrl.getAttribute()).toBe(attr);
 });
 
-it("Control: getDisabled Is Implemented", () => {
+test("Control: getDisabled Is Implemented", () => {
     expect(ctrl.getDisabled).not.toBe(null);
 });
 
-it("Control: setDisabled Is Implemented", () => {
+test("Control: setDisabled Is Implemented", () => {
     expect(ctrl.setDisabled).not.toBe(null);
 });
 
-it("Control: setDisabled and getDisabled works", () => {
+test("Control: setDisabled and getDisabled works", () => {
     ctrl.setDisabled(true);
     expect(ctrl.getDisabled()).toBe(true);
 });
 
-it("Control: CreateControlWithAttribute is implemented", () => {
+test("Control: CreateControlWithAttribute is implemented", () => {
     expect(CreateControlWithAttribute).not.toBe(null);
 });
 
-it("Control: CreateControlWithAttribute works", () => {
+test("Control: CreateControlWithAttribute works", () => {
     var ctrl2 = CreateControlWithAttribute("abr_name", "abc", "none", "Label", false, true);
     var attr2 = ctrl2.getAttribute();
     expect(attr2.getValue()).toBe("abc");
