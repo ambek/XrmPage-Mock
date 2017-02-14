@@ -1,13 +1,14 @@
-import { XrmEntityControle } from "./../Entity/XrmEntityControle";
+import { XrmEntityControl } from "./../Entity/XrmEntityControl";
+import { XrmControl } from "./../Control/XrmControl";
 export class XrmPageUiMock {
-    collection: Array<XrmEntityControle>;
+    collection: Array<XrmControl>;
     formType: number;
-    controls: XrmEntityControle;
+    controls: XrmEntityControl;
 
-    constructor(controls: Array<XrmEntityControle>, formType: number) {
+    constructor(controls: Array<XrmControl>, formType: number) {
         this.collection = controls;
         this.formType = formType;
-        this.controls = new XrmEntityControle(controls);
+        this.controls = new XrmEntityControl(controls);
     }
 
     getFormType(): number {

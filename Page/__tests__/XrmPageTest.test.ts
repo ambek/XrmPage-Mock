@@ -1,5 +1,5 @@
 ﻿import * as XrmMock from "./../../XrmMock";
-import { CreateSimpleControlWithAttribute, CreateControlWithAttribute } from "./../../Control/Control";
+import { CreateSimpleControlWithAttribute, CreateControlWithAttribute } from "../../Control/XrmControl";
 
 beforeEach(() => {
     jest.resetModules();
