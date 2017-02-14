@@ -1,5 +1,4 @@
-﻿import { XrmMock } from "./../XrmMock";
-import { XrmPageMock } from "./../XrmPageMock";
+﻿import * as XrmMock from "./../XrmMock";
 import { CreateSimpleControlWithAttribute, CreateControlWithAttribute } from "./../../Control/Control";
 
 beforeEach(() => {
@@ -9,8 +8,9 @@ beforeEach(() => {
     pageControls.push(CreateSimpleControlWithAttribute("abr_status", "Active", "Status"));
     pageControls.push(CreateSimpleControlWithAttribute("abr_type", 9500000001, "Type"));
     pageControls.push(CreateControlWithAttribute("abr_description", "", "none", "Description", false, false));
-    const page = new XrmPageMock("{607C16D1-7C53-4023-B20B-13E4F1C6A9D3}", pageControls, 1);
-    const Xrm = new XrmMock(page);
+    const page = new XrmMock.XrmPageMock("{607C16D1-7C53-4023-B20B-13E4F1C6A9D3}", pageControls, 1);
+    const Xrm = new XrmMock.XrmPage(page);
+
     (<any>window).Xrm = Xrm;
 });
 
