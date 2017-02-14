@@ -1,13 +1,13 @@
-import { Attribute } from "./../Attribute";
+import { XrmAttribute } from "../XrmAttribute";
 
-declare var attr: Attribute;
+declare var attr: XrmAttribute;
 declare var TEST_globalValue: string;
 
 beforeEach(() => {
     jest.resetModules();
-    const attr = new Attribute("abr_name", "abc", null, null);
-    (<any>window).attr = attr;
-    (<any>window).TEST_globalValue = "";
+    const attr = new XrmAttribute("abr_name", "abc", null, null);
+    (window as any).attr = attr;
+    (window as any).TEST_globalValue = "";
 });
 
 test("Attribute: addOnChange Is Implemented", () => {

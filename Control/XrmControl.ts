@@ -1,21 +1,21 @@
-﻿import { Attribute } from "./../Attributes/Attribute";
+﻿import { XrmAttribute } from "../Attributes/XrmAttribute";
 
-export function CreateSimpleControlWithAttribute(name: string, value: any, label: string): Control {
+export function CreateSimpleControlWithAttribute(name: string, value: any, label: string): XrmControl {
     return CreateControlWithAttribute(name, value, "none", label, false, true);
 };
 
-export function CreateControlWithAttribute(name: string, value: any, requiredLevel: string, label: string, disabled: boolean, visible: boolean): Control {
+export function CreateControlWithAttribute(name: string, value: any, requiredLevel: string, label: string, disabled: boolean, visible: boolean): XrmControl {
     let submitmode = "dirty";
     if (disabled || (visible === false)) {
         submitmode = "never";
     }
-    const attr: Attribute = new Attribute(name, value, requiredLevel, submitmode);
-    const ctrl: Control = new Control(attr, name, label, disabled, visible);
+    const attr: XrmAttribute = new XrmAttribute(name, value, requiredLevel, submitmode);
+    const ctrl: XrmControl = new XrmControl(attr, name, label, disabled, visible);
 
     return ctrl;
 };
 
-export class Control {
+export class XrmControl {
     name: string;
     label: string;
     visible: boolean;
@@ -30,7 +30,7 @@ export class Control {
         this.attribute = attribute;
     }
 
-    getAttribute(): Attribute {
+    getAttribute(): XrmAttribute {
         return this.attribute;
     }
 

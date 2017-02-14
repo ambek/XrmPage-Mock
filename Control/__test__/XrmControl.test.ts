@@ -1,15 +1,15 @@
-import { Attribute } from "./../../Attributes/Attribute";
-import { Control, CreateControlWithAttribute } from "./../Control";
+import { XrmAttribute } from "../../Attributes/XrmAttribute";
+import { XrmControl, CreateControlWithAttribute } from "../XrmControl";
 
-declare var ctrl: Control;
-declare var attr: Attribute;
+declare var ctrl: XrmControl;
+declare var attr: XrmAttribute;
 
 beforeEach(() => {
     jest.resetModules();
-    const attr= new Attribute("abr_name", "abc", null, null);
-    const ctrl = new Control(attr, "abr_name", "Label", false, true);
-    (<any>window).attr = attr;
-    (<any>window).ctrl = ctrl;
+    const attr= new XrmAttribute("abr_name", "abc", null, null);
+    const ctrl = new XrmControl(attr, "abr_name", "Label", false, true);
+    (window as any).attr = attr;
+    (window as any).ctrl = ctrl;
 });
 
 test("Control: getName Is Implemented", () => {

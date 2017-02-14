@@ -1,7 +1,7 @@
-import { Attribute } from "./../Attributes/Attribute";
-export class EntityAttributes {
-    collection: Array<Attribute>;
-    constructor(attributes: Array<Attribute>) {
+import { XrmAttribute } from "../Attributes/XrmAttribute";
+export class XrmEntityAttributes {
+    collection: Array<XrmAttribute>;
+    constructor(attributes: Array<XrmAttribute>) {
         this.collection = attributes;
     }
 

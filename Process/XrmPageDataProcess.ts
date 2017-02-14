@@ -1,31 +1,31 @@
-import { Stage } from "./../Stage/Stage";
+import { XrmStage } from "../Stage/XrmPageDataStage";
 
-export class Process{
+export class XrmProcess {
     id: string;
     name: string;
-    stages: Array<Stage>;
+    stages: Array<XrmStage>;
     rendered: boolean;
 
-    constructor(stages: Array<Stage>, id: string, name:string, rendered: boolean){
+    constructor(stages: Array<XrmStage>, id: string, name:string, rendered: boolean) {
         this.stages = stages;
         this.id = id;
         this.name = name;
         this.rendered = rendered;
     }
 
-    getId(): string{
+    getId(): string {
         return this.id;
     }
 
-    getName(): string{
+    getName(): string {
         return this.name;
     }
 
-    getStages(): Array<Stage>{
+    getStages(): Array<XrmStage> {
         return this.stages;
     }
 
-    isRendered(): boolean{
+    isRendered(): boolean {
         return this.rendered;
     }
 }

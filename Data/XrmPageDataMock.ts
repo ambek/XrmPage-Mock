@@ -1,12 +1,10 @@
-import { XrmPageDataProcessMock } from "..";
-import { Attribute } from "./../Attributes/Attribute";
+import { XrmAttribute } from "../Attributes/XrmAttribute";
 import { XrmPageDataEntityMock } from "./XrmPageDataEntityMock";
-import { XrmPageDataProcessMock } from "../Process/XrmPageDataProcessMock";
 
 export class XrmPageDataMock {
     entity: XrmPageDataEntityMock;
     // process: XrmPageDataProcessMock;
-    constructor(id: string, attributes: Array<Attribute>) {
+    constructor(id: string, attributes: Array<XrmAttribute>) {
         this.entity = new XrmPageDataEntityMock(id, attributes);
         // this.process = new XrmPageDataProcessMock();
     }

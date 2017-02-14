@@ -1,4 +1,4 @@
-﻿export class Attribute {
+﻿export class XrmAttribute {
     private submitMode: string;
     private requiredLevel: string;
     private value: any;

@@ -1,7 +1,7 @@
 import { XrmPageUiMock } from "./XrmPageUiMock";
-import { Control } from "./../Control/Control";
-import { Attribute } from "./../Attributes/Attribute";
-import { XrmPageDataMock } from "./XrmPageDataMock";
+import { XrmEntityControl } from "../Entity/XrmEntityControl";
+import { XrmAttribute } from "../Attributes/XrmAttribute";
+import { XrmPageDataMock } from "../Data/XrmPageDataMock";
 
 export class XrmPageMock {
     data: XrmPageDataMock;
@@ -15,11 +15,11 @@ export class XrmPageMock {
         this.ui = new XrmPageUiMock(controls, formType);
     }
 
-    getAttribute(attributeName: string): Attribute {
+    getAttribute(attributeName: string): XrmAttribute {
         return this.data.entity.attributes.get(attributeName);
     }
 
-    getControl(controlName: string): Control {
+    getControl(controlName: string): XrmEntityControl {
         return this.ui.controls.get(controlName);
     }
 }

@@ -1,7 +1,7 @@
-import { Control } from "./../Control/Control";
-export class EntityControl {
-    collection: Array<Control>;
-    constructor(controls: Array<Control>) {
+import { XrmControl } from "../Control/XrmControl";
+export class XrmEntityControl {
+    collection: Array<XrmControl>;
+    constructor(controls: Array<XrmControl>) {
         this.collection = controls;
     }
 

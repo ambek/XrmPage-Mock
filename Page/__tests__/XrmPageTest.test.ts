@@ -1,4 +1,4 @@
-﻿import * as XrmMock from "./../XrmMock";
+﻿import * as XrmMock from "./../../XrmMock";
 import { CreateSimpleControlWithAttribute, CreateControlWithAttribute } from "./../../Control/Control";
 
 beforeEach(() => {
@@ -11,7 +11,7 @@ beforeEach(() => {
     const page = new XrmMock.XrmPageMock("{607C16D1-7C53-4023-B20B-13E4F1C6A9D3}", pageControls, 1);
     const Xrm = new XrmMock.XrmPage(page);
 
-    (<any>window).Xrm = Xrm;
+    (window as any).Xrm = Xrm;
 });
 
 test("XrmPage: Xrm.Page is implemented", () => {
