@@ -15,39 +15,39 @@
         this.onChangeFunctions = [];
     }
 
-    getName() {
+    public getName() {
         return this.name;
     }
 
-    getValue() {
+    public getValue() {
         return this.value;
     }
 
-    setValue(newValue) {
+    public setValue(newValue) {
         this.value = newValue;
     }
 
-    getIsDirty() {
+    public getIsDirty() {
         return (this.value !== this.initValue);
     }
 
-    setSubmitMode(newSubmitMode) {
+    public setSubmitMode(newSubmitMode) {
         this.submitMode = newSubmitMode;
     }
 
-    getSubmitMode() {
+    public getSubmitMode() {
         return this.submitMode;
     }
 
-    setRequiredLevel(newRequiredLevel) {
+    public setRequiredLevel(newRequiredLevel) {
         this.requiredLevel = newRequiredLevel;
     }
 
-    getRequiredLevel () {
+    public getRequiredLevel () {
         return this.requiredLevel;
     }
 
-    getNameFromFunction(f: Function): string {
+    public getNameFromFunction(f: Function): string {
         const fstr: string = f.toString();
         const tmpFcName: RegExpExecArray = /^function\s+([\w\$]+)\s*\(/.exec(fstr);
 
@@ -58,7 +58,7 @@
         }
     }
 
-    addOnChange(f: Function): void {
+    public addOnChange(f: Function): void {
         let fObj = new Object(null);
         fObj = {
             "fc": f,
@@ -67,7 +67,7 @@
         this.onChangeFunctions.push(fObj);
     }
 
-    fireOnChange() {
+    public fireOnChange() {
         if (this.onChangeFunctions == null) {
             return;
         }
@@ -77,7 +77,7 @@
         }
     }
 
-    getEventSource() {
+    public getEventSource() {
         return this;
     }
 }

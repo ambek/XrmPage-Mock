@@ -2,14 +2,6 @@
   "scripts": {
     "test": "jest --no-cache"
   },
-  "dependencies": {
-    "@types/jest": "^16.0.0",
-    "@types/xrm": "^8.0.35",
-    "jest": "^17.0.3",
-    "ts-jest": "^17.0.0",
-    "typescript": "^2.0.10",
-    "yarn": "^0.17.9"
-  },
   "jest": {
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
@@ -22,6 +14,12 @@
     ]
   },
   "devDependencies": {
-    "jest": "^17.0.3"
+    "@types/jest": "^19.2.0",
+    "@types/sinon": "^1.16.35",
+    "@types/xrm": "^8.2.1",
+    "jest": "^19.0.2",
+    "sinon": "^1.17.7",
+    "ts-jest": "^19.0.0",
+    "typescript": "^2.2.1"
   }
 }
